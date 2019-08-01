@@ -1,4 +1,4 @@
-types_beta = {'music' : ['aac', 'ac3', 'aif', 'aiff', 'amr', 'aob', 'ape', 'asf',
+types = {'music' : ['aac', 'ac3', 'aif', 'aiff', 'amr', 'aob', 'ape', 'asf',
                     'aud', 'awb', 'bin', 'bwg', 'cdr', 'flac', 'gpx', 'ics',
                     'iff', 'm', 'm3u', 'm3u8', 'm4a', 'm4b', 'm4p', 'm4r',
                     'mid', 'midi', 'mod', 'mp3', 'mpa', 'mpp', 'msc', 'msv',
@@ -21,8 +21,4 @@ types_beta = {'music' : ['aac', 'ac3', 'aif', 'aiff', 'amr', 'aob', 'ape', 'asf'
                     'mkv', 'mod', 'moov', 'mov', 'mp4', 'mpeg', 'mpg', 'mts',
                     'rm', 'rmvb', 'spl', 'srt', 'stl', 'swf', 'ts', 'vcd',
                     'vid', 'vod', 'webm', 'wm', 'wmv', 'yuv']}
-#ниже расширения с которыми я сталкивался, пока вижу смысл только в них. А верхний нужно сделать более 'красивым'
-types = {'music': ['mp3', 'ogg', 'wav', 'flac', 'wma'],
-         'pictures': ['jpg', 'png', 'bmp'],
-         'documents' ['docx', 'pptx', 'xlsx', 'pdf']: #пока не буду добавлять книги, для них стоит создать отдельную директорию. и заметки тоже
-         'videos': ['mp4', 'avi']}
+
