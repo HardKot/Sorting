@@ -2,18 +2,19 @@ import os
 from listtype import types
 
 def bisearch(arr, name):
-    if arr[len(arr) // 2] < name:
-        return bisearch(arr[:len(arr) // 2], name)
-    if arr[len(arr) // 2] > name:
-        return bisearch(arr[len(arr) // 2 :], name)
-    if arr[len(arr) // 2] == name:
+    middle = len(arr) // 2
+    if arr[middle] == name:
         return True
-    else:
+    if len(arr) == 1:
         return False
+    if name < arr[middle]:
+        return bisearch(arr[:middle], name)
+    if name > arr[middle]:
+        return bisearch(arr[middle:], name)
 
 def typewriter(format):
     for type in types:
-        if types.get(type).count(format):
+        if bisearch(types.get(type), format):
             return type
     else:
         return False
