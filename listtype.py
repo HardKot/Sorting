@@ -21,4 +21,3 @@ types = {'music' : ['aac', 'ac3', 'aif', 'aiff', 'amr', 'aob', 'ape', 'asf',
                     'mkv', 'mod', 'moov', 'mov', 'mp4', 'mpeg', 'mpg', 'mts',
                     'rm', 'rmvb', 'spl', 'srt', 'stl', 'swf', 'ts', 'vcd',
                     'vid', 'vod', 'webm', 'wm', 'wmv', 'yuv']}
-

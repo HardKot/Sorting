@@ -1,23 +1,5 @@
 import os
-from listtype import types
-
-def bisearch(arr, name):
-    middle = len(arr) // 2
-    if arr[middle] == name:
-        return True
-    if len(arr) == 1:
-        return False
-    if name < arr[middle]:
-        return bisearch(arr[:middle], name)
-    if name > arr[middle]:
-        return bisearch(arr[middle:], name)
-
-def typewriter(format):
-    for type in types:
-        if bisearch(types.get(type), format):
-            return type
-    else:
-        return False
+import formats
 
 def scaning():
     files = list(filter(os.path.isfile, os.listdir()))
@@ -30,7 +12,7 @@ def scaning():
         else:
             continue
         format = format[::-1]
-        type = typewriter(format)
+        type = formats.searchtype(format)
         if type:
             os.system(r'move "{0}\{1}" c:\users\{2}\{3}'.format(os.getcwd(),
                                                                 file,
