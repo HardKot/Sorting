@@ -19,4 +19,4 @@ def scaning():
                                                                 os.getlogin(),
                                                                 type))
 
-scaning()
+    
