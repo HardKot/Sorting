@@ -14,9 +14,9 @@ def scaning():
         format = format[::-1]
         type = formats.searchtype(format)
         if type:
-            os.system(r'move "{0}\{1}" c:\users\{2}\{3}'.format(os.getcwd(),
-                                                                file,
-                                                                os.getlogin(),
-                                                                type))
-
-    
+            if os.name == 'posix':
+                command = 'cp "{0}\{1}" "/home/{2}/{3}'
+            elif os.name == 'nt':
+                command = 'move "{0}\{1}" c:\users\{2}\{3}'
+            os.system(command.format(os.getcwd(),file,os.getlogin(),type))
+            
