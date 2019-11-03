@@ -14,9 +14,20 @@ def scaning():
         format = format[::-1]
         type = formats.searchtype(format)
         if type:
-            os.system(r'move "{0}\{1}" c:\users\{2}\{3}'.format(os.getcwd(),
-                                                                file,
-                                                                os.getlogin(),
-                                                                type))
+            type = type[0]
+            storage = formats.takestorage(type)
+            os.system(r'move "{0}\{1}" {2}'.format(os.getcwd(), file, storage))
 
-    
+def start():
+    if os.path.getsize('sorting.db') == 16384 and False:
+        for type in formats.taketype():
+            type = type[0]
+            storge = str(input('Введите куда будут отправляться файлы типа {}: '.format(type)))
+            if len(storge):
+                formats.addstorage(type, storge)
+            else:
+                storage = r"C:\Users\{1}\{2}".format(os.getlogin(), type)
+                formats.addstorage(type, storge)
+    scaning()
+
+start()
